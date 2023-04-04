@@ -1,0 +1,53 @@
+/* html, body{
+  overflow-x: hidden;
+  } */
+body {
+  /* margin: 0; */
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+body {
+  margin-left: max(calc((100vw - 1360px) / 2), 10px);
+  margin-right: max(calc((100vw - 1360px) / 2), 10px);
+  font-family: 'Manrope', sans-serif;
+  max-width: 1360px;
+}
+
+@media screen and (max-width: 992px){
+body {
+    /* margin-left: 3vw;
+    margin-right: 3vw; */
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Manrope', sans-serif;
+}
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+:root {
+  --primary-color: #9747FF;
+  --primary-pill-color: wheat;
+  --secondary-pill-color: aliceblue;
+  --primary-danger-color: #f73378;
+  --primary-bg-color: #292424;
+  --secondary-bg-color: #D9D9D9;
+  --font-size-extralarge:22px;
+  --font-size-large:20px;
+  --font-size-normal:16px;
+  --font-size-small:14px;
+  --font-size-verysmall:10px;
+  --font-weight-extralarge:800;
+  --font-weight-large:600;
+  --font-weight-normal:500;
+}

@@ -1,0 +1,75 @@
+.AboutMeInsightCard__wrapper{
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    background-color: black;
+    color: white;
+    margin: 20px 5px 20px 5px;
+    border-radius: 30px;
+}
+
+
+.AboutMeInsightCard__avatar{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-right: min(50px);
+    object-fit: cover;
+}
+.AboutMeInsightCard__contents{
+    display: flex;
+    flex-direction: column;
+}
+.AboutMeInsightCard__row__one{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.AboutMeInsightDetailCard{
+    background-color: var(--secondary-bg-color);
+    color: black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    margin: 5px;
+}
+.AboutMeInsightDetailCard__icon{
+    width: 20px;
+    height: 20px;
+    padding: 5px 15px 15px 15px;
+}
+.AboutMeInsightDetailCard__type {
+    font-size: 14px;
+    font-weight: 600;
+}
+.AboutMeInsightDetailCard__caption{
+    font-size: 12px;
+    font-weight: 500;
+    color: grey;
+    margin-top: 5px;
+}
+.AboutMeInsightCard__row__two{
+    margin: 10px 0px;
+}
+
+
+@media screen and (max-width: 992px){
+    .AboutMeInsightCard__wrapper{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .AboutMeInsightCard__avatar{
+        margin: 0px 0px 20px 0px;
+    }
+
+
+}

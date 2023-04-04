@@ -1,0 +1,53 @@
+.Messages__indv__wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 100px;
+    overflow: hidden;
+    border: 1px solid black;
+    outline: transparent;
+
+}
+.Messages__indv__header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.Messages_content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.sender__email{
+    font-size: 12px;
+    color: gray;
+
+}
+.sender__name{
+    font-weight: 600;
+}
+.recieved_time{
+    font-size: 12px;
+    font-weight: 500;
+}
+.sender__message{
+    overflow: hidden;
+    font-style: italic;
+}
+.read{
+    background-color: white;
+}
+.Messages__indv__wrapper:hover{
+    cursor: pointer;
+    transition:1s ;
+    background-color: var(--secondary-bg-color) ;
+}

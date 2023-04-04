@@ -1,0 +1,21 @@
+.AboutMe__Section{
+    margin-top: 30px;
+}
+.AboutMe__wrapper__partone{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+.AboutMeSection__header {
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.115em;
+    color: rgb(41, 36, 36);
+    text-transform: uppercase;
+}
+.AboutMeSection__line{
+    width: 100%;
+    border-bottom: 1px solid rgb(41, 36, 36);
+}

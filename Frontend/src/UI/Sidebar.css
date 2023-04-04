@@ -1,0 +1,49 @@
+.Settings__Section__Sidebar__wrapper{
+    background-color: var(--primary-bg-color);
+    padding: 20px 10px ;
+    width: fit-content;
+    border-radius: 14px;
+}
+
+.Settings__Section__Sidebar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+.Settings__Section__Sidebar__option>a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+
+}
+.SidebarIcons{
+    height: 20px;
+    width: 20px;
+}
+.Settings__Section__Sidebar__option__header{
+    color: var(--secondary-bg-color);
+    margin: 10px 0px;
+}
+.Settings__Section__Sidebar__suboption{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    width: 160px;
+}
+.Settings__Section__Sidebar__suboption:hover{
+    border-radius: 10px;
+    background-color: #2d3738;
+}
+.SidebarOption__text{
+    color: white;
+}
+.Sidebar__hline{
+    border-bottom: 1px solid rgb(79, 78, 78);
+    margin: 10px 0px;
+}

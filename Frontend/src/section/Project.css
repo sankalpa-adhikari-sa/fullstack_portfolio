@@ -1,0 +1,34 @@
+.Projects__wrapper{
+    background-color: var(--primary-bg-color);
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 20px 10px 5px 10px;
+    margin: 20px 5px 20px 5px;
+}
+.ProjectsSection__text{
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.115em;
+    color: rgb(41, 36, 36);
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.ProjectsSection__text_highlight{
+    color: var(--primary-color);
+}
+.ProjectsSection__line{
+    width: 100%;
+    border-bottom: 1px solid rgb(41, 36, 36);
+}
+.ProjectsSection__header {
+    margin-top: 20px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.115em;
+    color: rgb(41, 36, 36);
+    text-transform: uppercase;
+}

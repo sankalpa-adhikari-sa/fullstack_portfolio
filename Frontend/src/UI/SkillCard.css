@@ -1,0 +1,46 @@
+
+.SkillCard__wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    background-color: black;
+    margin: 20px 5px 20px 5px;
+    border-radius: 30px;
+    color: white;
+    flex-grow: 1;
+
+}
+.Skill_pill_div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.SkillCard__header{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+.SkillCard__contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/* here starts the contents  */
+.SkillCard__contents__type{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px 10px 20px;
+    color: var(--primary-color);
+}
+.SkillCard__contents__one{
+    width: 45%;
+    padding: 20px 10px 20px 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
+.skills-line {
+    position: relative;
+    border-left: 2px solid #9747FF;
+}
+/* here ends the contents */

@@ -1,0 +1,42 @@
+
+.AboutMeCard__wrapper__content{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    color: white;
+
+}
+
+.AboutMeCard__asthetic__circle{
+    display: block;
+    position: relative;
+    border-radius: 50%;
+    background-color:#9747FF ;
+    width: 16px;
+    height: 16px;
+
+}
+.AboutMeCard__asthetic__line {
+    display: block;
+   background-color: #9747FF;
+   height: 90%;
+   width: 2px;
+    transform: translate(7px,-1px);
+}
+.AboutMeCard__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0px 0px 30px 50px;
+}
+.AboutMeCard__degree{
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color:#9747FF
+}
+.AboutMeCard__year,.AboutMeCard__school {
+    margin:5px 0px 5px 0px;
+    font: 14px;
+}

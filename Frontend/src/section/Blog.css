@@ -1,0 +1,9 @@
+.smallblogstry{
+overflow: hidden;
+cursor: grab;
+
+}
+.inner__smallblogstry{
+    display: flex;
+
+}

@@ -1,0 +1,33 @@
+.BlogCardSmall__wrapper {
+    display:  flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px;
+    max-height: 400px;
+    min-width: 400px;
+    overflow: hidden;
+    color: black;
+    cursor: pointer;
+}
+.BlogCardSmall__thumnail{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+.BlogCardSmall__Content__caption {
+    display: flex;
+    flex-direction: row;
+    color: black;
+    overflow: hidden;
+    padding:10px 20px 0px 20px;
+}
+
+.BlogCardSmall__Content__caption__createddate{
+    margin-right: 10px;
+}
+.BlogCardSmall__Content__title{
+    padding:0px 20px;
+}
+

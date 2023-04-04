@@ -1,0 +1,23 @@
+.Settings__Section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+.Settings__Section__content{
+    flex: 1;
+}
+.section__collapsable{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 20px;
+    height: fit-content;
+}
+.section__collapsable__header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 20px;
+}

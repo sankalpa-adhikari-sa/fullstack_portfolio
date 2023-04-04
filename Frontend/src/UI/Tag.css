@@ -1,0 +1,23 @@
+.Tag__wrapper {
+    display: block;
+    padding: 10px;
+    background-color: var(--secondary-pill-color);
+    border-radius: 10px;
+    width: fit-content;
+    color: black;
+    font-size: 10px;
+    font-weight: 600;
+    margin-right: min(20px);
+    margin-bottom:min(10px)
+}
+.SkillTag__wrapper {
+    display: block;
+    width: fit-content;
+    color: black;
+    background-color: var(--primary-pill-color);
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px;
+}
