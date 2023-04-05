@@ -2,7 +2,9 @@ import './Contact.css'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <div>Contact
+      {console.log('this is from contacts.js')}
+    </div>
   )
 }
 

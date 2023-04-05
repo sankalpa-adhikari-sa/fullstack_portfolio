@@ -14,6 +14,7 @@ function Home() {
         <UserInfoCard UserInfoHeader="Interests" UserInfoContent={InterestsContents} />
         <UserInfoCard UserInfoHeader="Skills" UserInfoContent={skillContents} />
         <GetinTouchCard/>
+        {console.log('this is from home.js')}
       </div>
     </div>
   )

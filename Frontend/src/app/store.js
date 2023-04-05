@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterReducer from '../features/dummySlice'
-
+import educationReducer from '../features/educationSlice'
+import experienceReducer from '../features/experienceSlice'
+import certificateReducer from '../features/certificateSlice'
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    education: educationReducer,
+    experience: experienceReducer,
+    certificate: certificateReducer,
   },
 })

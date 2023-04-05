@@ -3,87 +3,58 @@ import AboutMeCard from '../UI/AboutMeCard'
 import SkillsCard from '../UI/SkillsCard'
 import AboutMeInsightCard from '../UI/AboutMeInsightCard'
 import { useEffect, useState } from 'react'
-import axiosInstance from '../axios'
-function AboutMe() {
-  const [educationdata, setEducationData]= useState([]);
-  const [experiencedata, setExperienceData]= useState([]);
-  const [certificatedata, setCertificateData]= useState([]);
 
-  // getting educaiton data
-  const get_EducationData = () =>{
-    axiosInstance.get('info/education/').then(response =>{
-      setEducationData(response.data)
-      console.log(response.data)
-    })
-  }
-  // getting experience data
-  const get_ExperienceData = () =>{
-    axiosInstance.get('info/experience/').then(response =>{
-      setExperienceData(response.data)
-      console.log(response.data)
-    })
-  }
-  // getting certificate data
-  const get_CertificateData = () =>{
-    axiosInstance.get('info/certificate/').then(response =>{
-      setCertificateData(response.data)
-      console.log(response.data)
-    })
-  }
+import { useSelector, useDispatch } from 'react-redux'
+import { fetchEducationData } from '../features/educationSlice'
+import { fetchExperienceData } from '../features/experienceSlice'
+import { fetchCertificateData } from '../features/certificateSlice'
+function AboutMe() {
+
+  const dispatch= useDispatch()
+  const education = useSelector((state) => state.education)
+  const experience = useSelector((state) => state.experience)
+  const certificate = useSelector((state) => state.certificate)
   useEffect(() =>{
-    get_EducationData()
-    get_CertificateData()
-    get_ExperienceData()
-  },[])
+    const controller = new AbortController()
+    dispatch(fetchEducationData({ signal: controller.signal }))
+    dispatch(fetchExperienceData({ signal: controller.signal }))
+    dispatch(fetchCertificateData({ signal: controller.signal }))
+    return () => {
+      controller.abort()
+    }
+  },[dispatch]);
 
 
   return (
+
 
   <section className='AboutMe__Section' id='AboutMe__Section'>
     <div className='AboutMeSection__line'></div>
     <div className='AboutMeSection__header'>ABOUT ME</div>
     <div className='AboutMe__Insights'>
-      <AboutMeInsightCard/>
+      <AboutMeInsightCard />
     </div>
     <div className='AboutMe__wrapper__partone'>
-      <AboutMeCard educationdata={educationdata}/>
-      <AboutMeCard certificatedata={certificatedata}/>
-      <AboutMeCard experiencedata={experiencedata}/>
+    <AboutMeCard data={education.education_data} cardtype="EDUCATION"/>
+    <AboutMeCard data={certificate.certificate_data} cardtype="CERTIFICATE"/>
+    <AboutMeCard data={experience.experience_data} cardtype="EXPERIENCE"/>
+
+      {/* <AboutMeCard /> */}
+
     </div>
     <div className='AboutMe__wrapper__partone'>
       <SkillsCard/>
     </div>
     educationdata
-    {educationdata.map((education) =>{
+    {/* {education.education_data && education.education_data.map((EDUCATION) =>{
       return(
-        <div key={education.id}>
-          {education.title}
-          {education.period}
-          {education.college}
+        <div key={EDUCATION.id}>
+          {EDUCATION.title}
+          {EDUCATION.period}
+          {EDUCATION.college}
         </div>
       )
-    })}
-    experiencedata
-    {experiencedata.map((experience) =>{
-      return(
-        <div key={experience.id}>
-          {experience.title}
-          {experience.period}
-          {experience.company}
-        </div>
-      )
-    })}
-    certificatedata
-    {certificatedata.map((certificate) =>{
-      return(
-        <div key={certificate.id}>
-          {certificate.title}
-          {certificate.period}
-          {certificate.platform}
-          {certificate.link}
-        </div>
-      )
-    })}
+    })} */}
   </section>
   )
 }

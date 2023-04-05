@@ -1,26 +1,32 @@
 import './EducationForm.css'
 import React,{useState} from 'react'
-import axiosInstance from '../../axios';
-import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
+import { createEducationData } from '../../features/educationSlice';
 function EducationForm() {
-    const navigate= useNavigate();
-    const [title, setTitle] = useState("");
-    const [period, setPeriod] = useState("");
-    const [college, setCollege] = useState("");
+    const dispatch= useDispatch();
+    const [educationForm, setEducationForm]= useState({
+      "title": '',
+      "period": '',
+      "college": ''
+    })
 
+    const handleInputChange = (e) =>{
+      setEducationForm(
+        {
+          ...educationForm,
+          [e.target.name]: e.target.value
+        }
+      );
+    }
     const handleSubmit = (e) => {
       e.preventDefault();
-
-      axiosInstance.post('info/education/',
-        {
-          "title": title,
-          "period": period,
-          "college": college
-      }).then((res) =>
-      navigate('/settings/profile/education'))
-      setTitle('')
-      setPeriod('')
-      setCollege('')
+      console.log(educationForm.title)
+      dispatch(createEducationData(educationForm));
+      setEducationForm({
+        "title": '',
+        "period": '',
+        "college": ''
+      })
     };
 
   return (
@@ -30,8 +36,8 @@ function EducationForm() {
         type="text"
         id="title"
         name="title"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
+        value={educationForm.title}
+        onChange={handleInputChange}
         placeholder="Enter your title"
         required
       />
@@ -41,8 +47,8 @@ function EducationForm() {
         type="text"
         id="period"
         name="period"
-        value={period}
-        onChange={(e) => setPeriod(e.target.value)}
+        value={educationForm.period}
+        onChange={handleInputChange}
         placeholder="Enter your period"
         required
       />
@@ -52,8 +58,8 @@ function EducationForm() {
         type="text"
         id="college"
         name="college"
-        value={college}
-        onChange={(e) => setCollege(e.target.value)}
+        value={educationForm.college}
+        onChange={handleInputChange}
         placeholder="Enter your college"
         required
       ></input>

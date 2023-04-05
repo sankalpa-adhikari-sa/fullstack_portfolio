@@ -11,13 +11,13 @@ function Project() {
     const get_ProjectData = () =>{
       axiosInstance.get('projects/projects/').then(response =>{
         setProjectData(response.data)
-        console.log(response.data)
+        // console.log(response.data)
       })
     }
     const get_EducationData = () =>{
       axiosInstance.get('info/education/').then(response =>{
         setEducationData(response.data)
-        console.log(response.data)
+        // console.log(response.data)
       })
     }
 
@@ -34,15 +34,8 @@ function Project() {
       <ProjectFilter/>
 
       <div className='Projects__wrapper'>
-
+        {console.log('this is from projects')}
       {projectdata.results && projectdata.results.map((item) => (
-          // <li key={item.id}>
-          //   <p>Title: {item.title}</p>
-          //   <p>Caption: {item.caption}</p>
-          //   <p>Type: {item.type}</p>
-          //   <p>Status: {item.status}</p>
-          //   {/* Add more fields as needed */}
-          // </li>
           <ProjectCard content={item}/>
         ))}
       </div>

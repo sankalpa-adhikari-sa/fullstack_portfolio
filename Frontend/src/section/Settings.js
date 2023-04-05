@@ -9,6 +9,7 @@ function Settings() {
       <div className='Settings__Section__content'>
         <Outlet/>
       </div>
+      {console.log('this is from settings')}
     </section>
   )
 }
