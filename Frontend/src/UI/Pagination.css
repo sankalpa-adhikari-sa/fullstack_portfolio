@@ -1,0 +1,30 @@
+.pagination>.pagination-btn {
+    color: white;
+    background-color: #9747FF;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 10px;
+    text-decoration: none;
+
+}
+.pagination>.pagination-btn-now {
+    color: black;
+    background-color: wheat;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 10px;
+    text-decoration: none;
+
+}
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin:30px;
+    text-decoration: none;
+}

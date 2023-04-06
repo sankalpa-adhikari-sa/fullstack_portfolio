@@ -1,3 +1,6 @@
+.ProjectCard__Link{
+    text-decoration: none;
+}
 .ProjectCard__wrapper {
     display:  flex;
     flex-direction: row;

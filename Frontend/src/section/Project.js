@@ -2,29 +2,25 @@ import { useState,useEffect } from 'react'
 import ProjectCard from '../UI/ProjectCard'
 import ProjectFilter from '../UI/ProjectFilter'
 import './Project.css'
-import axiosInstance from '../axios'
+import { fetchProjectsData } from '../features/ProjectsSlice'
+import { useSelector, useDispatch } from 'react-redux'
+import Pagination from '../UI/Pagination'
 function Project() {
-  const [projectdata, setProjectData]=useState([]);
-  const [educationdata, setEducationData]= useState([]);
+  const dispatch= useDispatch()
+  const projects = useSelector((state) => state.projects)
+  const currentPage = useSelector((state) => state.projects.currentPage);
+  const filterOptions = useSelector((state) => state.projects.filterOptions);
+  const totalPages = useSelector((state) => state.projects.totalPages);
 
-    // getting educaiton data
-    const get_ProjectData = () =>{
-      axiosInstance.get('projects/projects/').then(response =>{
-        setProjectData(response.data)
-        // console.log(response.data)
-      })
-    }
-    const get_EducationData = () =>{
-      axiosInstance.get('info/education/').then(response =>{
-        setEducationData(response.data)
-        // console.log(response.data)
-      })
-    }
+  useEffect(() =>{
+    const controller = new AbortController()
+    dispatch(fetchProjectsData({ signal: controller.signal }))
 
-    useEffect(() =>{
-      get_ProjectData();
-      get_EducationData()
-    },[])
+    return () => {
+      controller.abort()
+    }
+  },[dispatch]);
+
   return (
     <section className='ProjectsSection' id='Projects__Section'>
       <div className='ProjectsSection__text'>Want to see my <span className='ProjectsSection__text_highlight'>Projects ?</span></div>
@@ -34,10 +30,14 @@ function Project() {
       <ProjectFilter/>
 
       <div className='Projects__wrapper'>
-        {console.log('this is from projects')}
-      {projectdata.results && projectdata.results.map((item) => (
-          <ProjectCard content={item}/>
-        ))}
+
+{projects.Project_data.results && projects.Project_data.results.map((proj) =>{
+      return(
+        <ProjectCard content={proj}/>
+      )
+    })}
+    {/* {console.log(projects.Project_data.results)} */}
+    <Pagination/>
       </div>
       </div>
     </section>
