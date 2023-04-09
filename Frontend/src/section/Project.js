@@ -30,7 +30,7 @@ function Project() {
       <ProjectFilter/>
 
       <div className='Projects__wrapper'>
-      {/* {console.log(projects.Project_data.results[0])} */}
+
 
 {projects.Project_data.results && projects.Project_data.results.map((proj) =>{
       return(
@@ -39,7 +39,7 @@ function Project() {
         </div>
       )
     })}
-    {/* {console.log(projects.Project_data.results)} */}
+
     <Pagination/>
       </div>
       </div>
