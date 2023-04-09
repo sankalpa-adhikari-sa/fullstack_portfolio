@@ -30,10 +30,13 @@ function Project() {
       <ProjectFilter/>
 
       <div className='Projects__wrapper'>
+      {/* {console.log(projects.Project_data.results[0])} */}
 
 {projects.Project_data.results && projects.Project_data.results.map((proj) =>{
       return(
-        <ProjectCard content={proj}/>
+        <div key={proj.id}>
+          <ProjectCard  content={proj}/>
+        </div>
       )
     })}
     {/* {console.log(projects.Project_data.results)} */}

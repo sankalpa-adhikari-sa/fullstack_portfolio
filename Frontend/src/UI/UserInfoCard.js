@@ -8,8 +8,9 @@ function UserInfoCard(props) {
     <div className='UserInfoCard__wrapper'>
       <div className='UserInfoCard__header'>{props.UserInfoHeader}</div>
       <div className='UserInfoCard__contents'>
-        {props.UserInfoContent.map((UserInfoContent) => (
-          <div className='UserInfoCard__contents__div'>
+        {props.UserInfoContent.map((UserInfoContent,index) => (
+          <div key={index} className='UserInfoCard__contents__div'>
+
           <DataScienceIcon className='UserInfoCard__icon'/>
           <div className='UserInfoCard__text'>{UserInfoContent}</div>
         </div>
