@@ -7,7 +7,7 @@ const initialState = {
   currentPage:1,
   totalPages:null,
   filterOptions:{
-    type:null,
+    type:'',
   },
   project:null,
   error: '',
@@ -25,10 +25,9 @@ export const fetchProject = createAsyncThunk('projects/fetchProject', async (pro
   }
 );
 
-export const fetchProjectsData = createAsyncThunk('projects/fetchProjectsData', async ({page,type}) => {
+export const fetchProjectsData = createAsyncThunk('projects/fetchProjectsData', async ({type}) => {
   try {
-    const response = await axiosInstance.get('projects/projects/',{params:{
-      page,
+    const response = await axiosInstance.get('projects/projects/', {params:{
       type
     }});
     return response.data;
@@ -54,7 +53,7 @@ const projectsSlice = createSlice({
       state.currentPage = action.payload;
     },
     setFilteroptions:(state,action) =>{
-      state.filterOptions = action.payload;
+      state.filterOptions.type = action.payload;
     },
   },
   extraReducers: (builder) => {

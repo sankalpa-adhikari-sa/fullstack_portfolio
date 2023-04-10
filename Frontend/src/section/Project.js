@@ -14,12 +14,13 @@ function Project() {
 
   useEffect(() =>{
     const controller = new AbortController()
-    dispatch(fetchProjectsData({ signal: controller.signal }))
+    dispatch(fetchProjectsData({type: filterOptions.type, signal: controller.signal }))
 
     return () => {
       controller.abort()
+
     }
-  },[dispatch]);
+  },[dispatch, filterOptions]);
 
   return (
     <section className='ProjectsSection' id='Projects__Section'>
@@ -41,6 +42,7 @@ function Project() {
     })}
 
     <Pagination/>
+
       </div>
       </div>
     </section>

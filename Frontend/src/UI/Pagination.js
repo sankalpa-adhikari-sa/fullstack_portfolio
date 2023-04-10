@@ -1,7 +1,8 @@
 import './Pagination.css'
-import React from 'react'
+import React, { useState } from 'react'
 
 function Pagination() {
+  const [filter, setFilter]= useState('');
   return (
     <div className="pagination">
         <a className="pagination-btn" href="/">&#10094;</a>
