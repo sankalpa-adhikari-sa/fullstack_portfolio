@@ -1,3 +1,6 @@
+.BlogCard__Link{
+    text-decoration: none;
+}
 .BlogCard__wrapper {
     display:  flex;
     flex-direction: row;

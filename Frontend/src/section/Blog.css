@@ -7,3 +7,10 @@ cursor: grab;
     display: flex;
 
 }
+.Blogs__wrapper{
+    background-color: var(--secondary-bg-color);
+    border-radius: 30px;
+    box-sizing: border-box;
+    padding: 20px 10px 5px 10px;
+    margin: 20px 5px 20px 5px;
+}

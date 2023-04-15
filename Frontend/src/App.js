@@ -15,6 +15,7 @@ import Messages from './section/settings/Messages'
 import Login from './section/Login';
 import PrivateRoute from './components/PrivateRoute';
 import ProjectIndv from './section/ProjectIndv';
+import BlogIndv from './section/BlogIndv';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/' element={<StartPage/>}/>
         <Route path='/projects/page/:pageNumber' element={<StartPage/>}/>
         <Route path="/project/:id" element={<ProjectIndv/>} />
+        <Route path="/blog/:id" element={<BlogIndv/>} />
         <Route path='/login' element={<Login/>}/>
         <Route   element={<PrivateRoute/>}>
           <Route path='/settings' element={<Settings/>}>
