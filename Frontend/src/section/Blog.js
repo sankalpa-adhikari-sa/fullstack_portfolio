@@ -14,10 +14,10 @@ function Blog() {
   const currentPage = useSelector((state) => state.blogs.currentPage);
   const filterOptions = useSelector((state) => state.blogs.filterOptions);
   const totalPages = useSelector((state) => state.blogs.totalPages);
-  const [width, setWidth]= useState(0);
-  const  carousel= useRef();
+
+
   useEffect(()=>{
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+
     const controller = new AbortController()
     dispatch(fetchBlogsData({type: filterOptions.type, signal: controller.signal }))
     return () => {
@@ -43,18 +43,6 @@ function Blog() {
       )
     })}
 
-      <motion.div ref={carousel} className='smallblogstry'>
-        <motion.div drag='x' dragConstraints={{right:0, left: -width}} className='inner__smallblogstry'>
-          <BlogCardSmall/>
-          <BlogCardSmall/>
-          <BlogCardSmall/>
-          <BlogCardSmall/>
-          <BlogCardSmall/>
-          <BlogCardSmall/>
-          <BlogCardSmall/>
-          <BlogCardSmall/>
-        </motion.div>
-      </motion.div>
       </div>
       </div>
     </section>

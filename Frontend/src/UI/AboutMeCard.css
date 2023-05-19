@@ -10,6 +10,7 @@
     /* min-width: 310px; */
     flex-grow: 1;
     flex-basis: auto;
+    text-transform: uppercase;
 
 
 }
